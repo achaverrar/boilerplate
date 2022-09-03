@@ -1,0 +1,192 @@
+/*
+RESET PRO
+source: https://github.com/eduardofierropro/Reset-CSS
+*/
+
+/* CSS CUSTOM PROPERTIES */
+// Regular mode
+:root {
+  /* Colors */
+  --color-black: #393939;
+  --color-white: #ececec;
+  /* Fonts */
+  --font-primary: Helvetica, Arial, sans-serif;
+  --font-secondary: Verdana;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Colors */
+    --color-black: #ececec;
+    --color-white: #393939;
+  }
+}
+
+/* Optional */
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  :root {
+  }
+}
+
+/* Optional */
+/* Disable animations */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* BASIC SETTING FOR */
+/* Font */
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+body {
+  min-height: 100%;
+  /* optional */
+  text-align: left;
+  /* optional */
+  line-height: 1.4em;
+  /* optional */
+  hyphens: auto;
+  /* optional */
+  font-smooth: always;
+  /* optional */
+  -webkit-font-smoothing: antialiased;
+  /* optional */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selected text */
+::selection {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+/* FIX COMMON BUGS WITH... */
+
+/* Spacing */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: inherit;
+  vertical-align: baseline;
+}
+
+/* Media resources */
+img,
+picture,
+video,
+iframe,
+figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* optional */
+  object-fit: cover;
+  /* optional */
+  object-position: center center;
+}
+
+/* Anchor tags */
+// Outside paragraphs
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+// Within paragraphs
+p a {
+  display: inline;
+}
+
+/* List items */
+li {
+  list-style-type: none;
+}
+
+/* Text tags */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Blockquotes */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+/* Forms */
+form,
+input,
+textarea,
+select,
+button,
+label {
+  font-family: inherit;
+  font-size: inherit;
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* optional */
+  appearance: none;
+}
+
+/* Tables */
+table,
+tr,
+td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* (Probándolo, no usar en producción) En el caso de añadir una  */
+/* p svg{
+  display: inline;
+  width: initial;
+} */

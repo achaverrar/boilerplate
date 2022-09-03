@@ -1,0 +1,28 @@
+/*
+@use "../abstracts/" as *;
+// Using floats
+.row {
+  max-width: $grid-width;
+  margin: 0 auto;
+
+  &:not(:last-child) {
+    margin-bottom: $gutter-vertical;
+  }
+
+  @include clearfix;
+
+  [class^="col-"] {
+    float: left;
+
+    &:not(:last-child) {
+      margin-right: $gutter-horizontal;
+    }
+  }
+}
+.col-n-m {
+  width: calc( n * (100% - n * #{$gutter-horizontal}) / m + (n-1) * #{$gutter-horizontal});
+}
+}
+
+
+*/
